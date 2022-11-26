@@ -33,7 +33,7 @@
 % along with this program; if not, write to the Free Software
 % Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-function data = eeglab2fieldtrip(EEG, fieldbox, transform)
+function data = eeglab2fieldtrip_gzd(EEG, fieldbox, transform)
 
 if nargin < 2
   help eeglab2fieldtrip
