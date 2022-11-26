@@ -14,12 +14,12 @@ elseif all_cond == 0 && all(all_cond==0 & ~contains(string(spec_cond),'0')==1)
     if max(spec_cond)<=length(erp_cond)
         tmp_ee = spec_cond;
     else
-        war = warndlg('输入的条件数不在范围内，请重选', '提示');
+        war = warndlg('The input is not in the range, please enter the correct order.', 'Tip');
         uiwait(war, 10)
         plot_dialog
     end
 else
-    war = warndlg('输入的条件数不在范围内，请重选', '提示');
+    war = warndlg('The input is not in the range, please enter the correct order.', 'Tip');
     uiwait(war, 10)
     plot_dialog
 end
@@ -89,7 +89,7 @@ for ee = tmp_ee
     end
     % time break
     if ee ~= tmp_ee(end)
-        button=questdlg('是否继续下一个条件的画图？','Timebreak','Yes','No','Yes');
+        button=questdlg('Would you like plot the next result?','Timebreak','Yes','No','Yes');
         if strcmp(button,'Yes')
             continue % Yes
         else
